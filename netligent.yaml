@@ -5,12 +5,13 @@
 - tasks: 
     - name: docker installation
     - apt:
+        update_cache : yes
         name: docker.io
         state: present
 
     - name: copy dockerfile to remote ansible machine
     - copy:
-        src: /var/lib/jenkins/workspace/ansibledocker/Dockerfile
+        src: /var/lib/jenkins/workspace/demoansi/Dockerfile
         dest: /home/ubuntu
 
     - name: docker image creation
