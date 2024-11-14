@@ -4,7 +4,7 @@
   become: true
   tasks: 
     - name: docker installation
-    - apt:
+      apt:
         update_cache : yes
         name: docker.io
         state: present
@@ -12,7 +12,7 @@
     - name: copy dockerfile to remote ansible machine
       copy:
         src: /var/lib/jenkins/workspace/demoansi/Dockerfile
-        dest: /home/ubuntu
+        dest: /home/ubuntu/
 
     - name: docker image creation
       docker_image:
