@@ -22,7 +22,7 @@
           path: /home/ubuntu/
           pull: false
 
-   - name : docker container creation
+   - name: docker container creation
      docker_container:
        name: cs4
        image: net1
